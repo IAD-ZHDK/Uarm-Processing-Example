@@ -50,12 +50,6 @@ boolean setPolarPosition(int st, int ro, int he, int speed) {
   return false;
 }
 
-boolean setHeight(int he, int speed) {
-  writeSerial("G2205 S10 R10 H10 F1000"); // relative displacement
-  return false;
-}
-
-
 void writeSerial(String CMD) {
 // block sending message untill 100 millis have ellapsed to avoid flooding buffer
   while(lastSetialCommand>millis()-100) {
